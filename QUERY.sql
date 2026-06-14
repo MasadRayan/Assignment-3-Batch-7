@@ -78,8 +78,53 @@ VALUES
     'Available'
   );
 
+INSERT INTO
+  Users (user_id, full_name, email, role, phone_number)
+VALUES
+  (
+    1,
+    'Tanvir Rahman',
+    'tanvir@mail.com',
+    'Football Fan',
+    '+8801711111111'
+  ),
+  (
+    2,
+    'Asif Haque',
+    'asif@mail.com',
+    'Football Fan',
+    '+8801722222222'
+  ),
+  (
+    3,
+    'Sajjad Rahman',
+    'sajjad@mail.com',
+    'Ticket Manager',
+    '+8801733333333'
+  ),
+  (
+    4,
+    'Jannat Ara',
+    'jannat@mail.com',
+    'Football Fan',
+    NULL
+  );
 
-
+INSERT INTO
+  Bookings (
+    booking_id,
+    user_id,
+    match_id,
+    seat_number,
+    payment_status,
+    total_cost
+  )
+VALUES
+  (501, 1, 101, 'A-12', 'Confirmed', 150.00),
+  (502, 1, 102, 'B-04', 'Confirmed', 120.00),
+  (503, 2, 101, 'A-13', 'Confirmed', 150.00),
+  (504, 2, 101, NULL, NULL, 150.00),
+  (505, 3, 102, 'C-20', 'Pending', 120.00);
 
 
 
