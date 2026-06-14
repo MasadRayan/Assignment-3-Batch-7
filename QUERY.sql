@@ -152,7 +152,16 @@ where
   or full_name ilike '%Haque%';
 
 
-
+-- Query 3: Retrieve all booking records where the payment status is missing (NULL), replacing the empty result with 'Action Required'.
+select
+  booking_id,
+  user_id,
+  match_id,
+  coalesce(payment_status, 'Action Required') as "systematic_status"
+from
+  bookings
+where
+  payment_status is null;
 
 
 
