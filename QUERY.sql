@@ -7,7 +7,7 @@ create table Users (
 );
 
 create table Matches (
-  match_id serial primary key,
+  match_id int primary key,
   fixture text not null,
   tournament_category varchar(255) not null,
   base_ticket_price decimal(10, 2) not null check (base_ticket_price >= 0),
@@ -22,7 +22,7 @@ create table Matches (
 );
 
 create table Bookings (
-  booking_id serial primary key,
+  booking_id int primary key,
   user_id int not null references Users (user_id),
   match_id int not null references Matches (match_id),
   seat_number varchar(10),
